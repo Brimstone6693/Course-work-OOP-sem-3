@@ -24,10 +24,6 @@
 #include "Database.h"
 #include "SoftwarePackage.h"
 
-QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
-QT_END_NAMESPACE
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -60,8 +56,6 @@ private:
     void updateStatusBar();
     void refreshTable();
 
-    Ui::MainWindow *ui;
-    
     // Main widgets
     QWidget *centralWidget;
     QVBoxLayout *mainLayout;
