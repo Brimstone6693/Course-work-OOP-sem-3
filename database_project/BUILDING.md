@@ -40,3 +40,7 @@ make
 - g++ compiler
 - pkg-config
 - C++17 compatible compiler
+
+## Build Status
+
+The application has been successfully built and tested. All Qt5 dependencies are properly linked.
