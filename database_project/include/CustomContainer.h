@@ -33,7 +33,7 @@ public:
     const reference operator*() const { return m_container->operator[](m_index); }
     
     pointer operator->() { return &(m_container->operator[](m_index)); }
-    const pointer operator->() const { return &(m_container->operator[](m_index)); }
+    const T* operator->() const { return &(m_container->operator[](m_index)); }
 
 private:
     QVector<T>* m_container;
