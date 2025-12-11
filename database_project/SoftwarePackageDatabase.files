@@ -1,0 +1,12 @@
+src/main.cpp
+src/MainWindow.cpp
+src/Database.cpp
+src/SoftwarePackage.cpp
+include/MainWindow.h
+include/Database.h
+include/SoftwarePackage.h
+include/CustomContainer.h
+CMakeLists.txt
+README.md
+BUILDING.md
+PROJECT_SUMMARY.md

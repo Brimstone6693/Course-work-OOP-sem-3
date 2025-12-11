@@ -1,53 +1,12 @@
 ```
 # Qt/CMake build artifacts
-*.pro.user
-*.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-*.moc.cpp
-*.ui.h
-*.ts
-*.qm
-*.autoscan
-*.autoscan.*
-*.autoscan.user
-*.autoscan.user.*
+*.creator
+*.files
+qt_windows_setup.bat
 
-# CMake build artifacts
+# CMake build directories
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 Makefile
-compile_commands.json
-build/
-dist/
-
-# Qt Creator files
-*.creator
-*.creator.user
-*.files
-*.creator-shared
-*.creator-build
-
-# Temporary files
-*.tmp
-*.swp
-*~
-
-# Logs
-*.log
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Dependencies
-node_modules/
-venv/
-.venv/
-__pycache__/
-.mypy_cache/
-.pytest_cache/
 ```

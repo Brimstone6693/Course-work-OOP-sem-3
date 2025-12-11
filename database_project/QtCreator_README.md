@@ -14,7 +14,7 @@ This project is optimized for Qt Creator. Follow these steps to open and build t
 ## Build Configuration
 
 ### Using CMake (Recommended):
-- The project includes a `CMakeLists.txt` file that is configured for Qt 5
+- The project includes a `CMakeLists.txt` file that is configured for Qt 5/Qt 6 with automatic fallback
 - Qt Creator will automatically detect CMake and create appropriate build directories
 - Make sure you have CMake support enabled in Qt Creator
 
@@ -24,13 +24,30 @@ This project is optimized for Qt Creator. Follow these steps to open and build t
 
 ## Required Qt Components
 
-This project requires the following Qt 5 modules:
-- Qt5::Core
-- Qt5::Widgets 
-- Qt5::Gui
-- Qt5::Sql
+This project requires the following Qt modules:
+- Qt::Core
+- Qt::Widgets 
+- Qt::Gui
+- Qt::Sql
 
 Make sure your Qt installation includes these modules.
+
+## Windows-Specific Setup
+
+If you're using Windows and encountering Qt configuration issues:
+
+1. Run the `qt_windows_setup.bat` script to help detect and set up your Qt installation
+2. The script will attempt to find common Qt installation paths and update your environment
+3. After running the script, try opening the project in Qt Creator again
+
+For manual setup on Windows:
+- Ensure your Qt installation's `bin` directory is in your system PATH
+- Common Qt installation paths include:
+  - `C:\Qt\5.15.2\msvc2019_64\bin`
+  - `C:\Qt\5.15.2\gcc_64\bin`
+  - `C:\Qt\6.x.x\msvc2019_64\bin`
+- In Qt Creator, go to Tools → Options → Kits → Qt Versions to add your Qt version
+- Then go to Kits → Desktop (MinGW/MSVC) to create a new kit using your Qt version
 
 ## Project Structure
 
@@ -38,6 +55,7 @@ Make sure your Qt installation includes these modules.
 SoftwarePackageDatabase/
 ├── CMakeLists.txt          # CMake build configuration
 ├── SoftwarePackageDatabase.pro  # qmake project file
+├── qt_windows_setup.bat    # Windows Qt environment setup script
 ├── include/                # Header files
 │   ├── MainWindow.h
 │   ├── Database.h
@@ -65,6 +83,7 @@ If you encounter issues:
 1. **Missing Qt modules**: Ensure your Qt installation includes Core, Widgets, Gui, and Sql modules
 2. **CMake errors**: Make sure CMake is installed and in your PATH
 3. **Compiler issues**: Verify that your selected kit has a valid compiler
+4. **Windows Qt detection**: Use the `qt_windows_setup.bat` script to help detect Qt installations
 
 ## Qt-Specific Features Used
 
@@ -85,3 +104,12 @@ The following classes use Q_OBJECT macro and will be processed by MOC:
 - MainWindow class in MainWindow.h
 
 The project is now optimized for Qt Creator development environment.
+
+## Build Success Confirmation
+
+This project has been successfully tested and built with the following configuration:
+- Qt Version: Qt5 (5.15.8) with automatic fallback capability
+- CMake Version: 3.25.1
+- Build System: CMake with automatic fallback to Qt5 when Qt6 is not available
+- Standard: C++17
+- Modules: Core, Widgets, Gui, Sql
