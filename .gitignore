@@ -1,12 +1,19 @@
 ```
-# Qt/CMake build artifacts
-*.creator
-*.files
-qt_windows_setup.bat
+# Build artifacts
+database_project/build/
+*.o
+*.obj
 
-# CMake build directories
-CMakeFiles/
-CMakeCache.txt
-cmake_install.cmake
-Makefile
+# Generated files
+database_project/build/moc_*.cpp
+database_project/build/*_autogen/
+
+# Temporary and log files
+*.tmp
+*.log
+
+# Environment
+.env
+.env.local
+*.env.*
 ```
