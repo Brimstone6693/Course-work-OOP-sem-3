@@ -102,3 +102,36 @@ make
 ├── CMakeLists.txt           # Build configuration
 └── README.md               # This file
 ```
+
+## Building on Windows 11
+
+### With Qt Creator and MinGW
+
+To build on Windows 11:
+
+1. Ensure Qt5 with MinGW is properly installed
+2. Open the `SoftwarePackageDatabase.pro` file in Qt Creator
+3. Select the appropriate MinGW kit (e.g., Desktop Qt 5.x.x MinGW 64-bit)
+4. Configure and build the project using Qt Creator
+
+### With Command Line Tools
+
+Alternatively, you can build from command line using qmake:
+
+1. Open Qt Command Prompt or MinGW shell
+2. Navigate to the project directory
+3. Run these commands:
+
+```cmd
+qmake SoftwarePackageDatabase.pro
+mingw32-make
+```
+
+This will generate `SoftwarePackageDatabase.exe` which can be run on Windows.
+
+### Prerequisites for Windows
+
+Make sure you have:
+- Qt5 installed with MinGW compiler
+- The PATH environment variable includes Qt and MinGW directories
+- All required Qt libraries (Qt Core, Gui, Widgets)
